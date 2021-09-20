@@ -1,0 +1,33 @@
+{
+  "name": "dbounce",
+  "version": "0.0.1",
+  "description": "Basic thread-wide de-bounce helper",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "tape $(aaargh config.test.json)",
+    "build": "esbuild $(aaargh config.build.json)",
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{print $2}' | sed 's/[\",]//g' | tr -d '[[:space:]]') && npm deprecate \"dbounce@<${PACKAGE_VERSION}\" \"Rolling release, please update to ${PACKAGE_VERSION}\""
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "debounce"
+  ],
+  "author": "Robin Bron <robin@finwo.nl>",
+  "license": "MIT",
+  "funding": {
+    "url": "https://github.com/sponsors/finwo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finwo/dbounce.git"
+  },
+  "devDependencies": {
+    "aaargh": "^1.0.1",
+    "esbuild": "^0.12.19",
+    "tape": "^5.3.1"
+  }
+}
