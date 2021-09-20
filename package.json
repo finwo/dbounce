@@ -1,6 +1,6 @@
 {
   "name": "dbounce",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Basic thread-wide de-bounce helper",
   "main": "dist/index.js",
   "scripts": {
