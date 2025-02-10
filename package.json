@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "aaargh": "^1.0.1",
-    "esbuild": "^0.12.19",
+    "esbuild": "^0.25.0",
     "tape": "^5.3.1"
   }
 }
